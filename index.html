@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow Guide | Skincare Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar navigation -->
+        <aside class="sidebar">
+            <h2 class="logo">♡ Glow Guide</h2>
+            <p class="tagline">Better skin. Brighter days.</p>
+
+            <nav>
+                <a href="index.html" class="active">⌂ Home</a>
+                <a href="#routine">♡ My Routine</a>
+                <a href="#beauty">♧ Beauty Shelf</a>
+                <a href="#diary">▤ Skin Diary</a>
+            </nav>
+
+            <div class="sidebar-note">
+                <span>♡</span>
+                <p>Self-care is always a good idea.</p>
+            </div>
+        </aside>
+
+        <!-- Main dashboard -->
+        <main class="main-content">
+
+            <header class="topbar">
+                <span>YOUR PERSONAL BEAUTY SPACE</span>
+                <span class="profile">N</span>
+            </header>
+
+            <section class="welcome">
+                <div>
+                    <p class="eyebrow">YOUR DAILY GLOW ✨</p>
+                    <h1>Welcome to your glow journey!</h1>
+                    <p>Small steps, healthy habits, beautiful you.</p>
+                </div>
+                <div class="hero-icon">✿</div>
+            </section>
+
+            <section class="stats">
+                <article class="stat-card">
+                    <span class="stat-icon">🧴</span>
+                    <p>Total Products</p>
+                    <h2 id="product-count">4</h2>
+                    <small>In your beauty shelf</small>
+                </article>
+
+                <article class="stat-card">
+                    <span class="stat-icon">✓</span>
+                    <p>Completed Routines</p>
+                    <h2 id="routine-count">5 / 7</h2>
+                    <small id="routine-caption">Keep going!</small>
+                </article>
+
+                <article class="stat-card">
+                    <span class="stat-icon">♡</span>
+                    <p>Skin Diary</p>
+                    <h2 id="diary-count">3</h2>
+                    <small>Entries recorded</small>
+                </article>
+            </section>
+
+            <section class="bottom-grid">
+
+                <article class="panel progress-panel" id="routine">
+                    <p class="eyebrow">YOUR SELF-CARE</p>
+                    <h2>Routine progress</h2>
+
+                    <div class="progress-content">
+                        <div class="progress-circle" id="progress-circle">
+                            <span id="progress-number">71%</span>
+                        </div>
+                        <div>
+                            <h3>You're doing great!</h3>
+                            <p id="progress-message">
+                                Every little step counts.
+                            </p>
+                        </div>
+                    </div>
+
+                    <button id="complete-button">
+                        Complete a routine ✓
+                    </button>
+                </article>
+
+                <article class="panel links-panel">
+                    <p class="eyebrow">EXPLORE GLOW GUIDE</p>
+                    <h2>Your beauty space</h2>
+
+                    <a href="#routine" class="quick-link">
+                        ♡ &nbsp; My Skincare Routine
+                    </a>
+                    <a href="#beauty" class="quick-link">
+                        🧴 &nbsp; Beauty Shelf
+                    </a>
+                    <a href="#diary" class="quick-link">
+                        ✎ &nbsp; Skin Diary
+                    </a>
+
+                    <p class="quote">
+                        "Healthy skin starts with caring for yourself."
+                    </p>
+                </article>
+
+            </section>
+
+            <footer>
+                Made with ♡ for your self-care journey.
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<section id="beauty" class="page-section">
+    <h2>My Beauty Shelf ♡</h2>
+    <p>Keep all your favourite skincare products in one place.</p>
+
+    <form id="product-form">
+        <input
+            type="text"
+            id="product-name"
+            placeholder="Product name"
+            required
+        >
+
+        <select id="product-category" required>
+            <option value="">Choose a category</option>
+            <option value="Cleanser">Cleanser</option>
+            <option value="Moisturizer">Moisturizer</option>
+            <option value="Sunscreen">Sunscreen</option>
+            <option value="Serum">Serum</option>
+        </select>
+
+        <input
+            type="number"
+            id="product-price"
+            placeholder="Price"
+            min="0"
+            step="0.01"
+            required
+        >
+
+        <button type="submit">Add Product</button>
+    </form>
+
+    <div id="product-list"></div>
+</section>
+<section id="routine" class="page-section">
+    <h2>My Skincare Routine ♡</h2>
+    <p>Take your routine one step at a time.</p>
+
+    <div class="routine-card">
+        <h3>☀️ Morning Routine</h3>
+
+        <label>
+            <input type="checkbox" class="routine-check">
+            Cleanse my face
+        </label>
+
+        <label>
+            <input type="checkbox" class="routine-check">
+            Apply moisturizer
+        </label>
+
+        <label>
+            <input type="checkbox" class="routine-check">
+            Apply sunscreen
+        </label>
+    </div>
+
+    <div class="routine-card">
+        <h3>🌙 Evening Routine</h3>
+
+        <label>
+            <input type="checkbox" class="routine-check">
+            Cleanse my face
+        </label>
+
+        <label>
+            <input type="checkbox" class="routine-check">
+            Apply treatment, if needed
+        </label>
+
+        <label>
+            <input type="checkbox" class="routine-check">
+            Apply moisturizer
+        </label>
+    </div>
+
+    <p id="routine-status">0 of 6 steps completed.</p>
+</section>
+<section id="diary" class="page-section">
+    <h2>My Skin Diary 📖</h2>
+    <p>Record how your skin feels today.</p>
+
+    <form id="diary-form">
+        <label for="skin-mood">How does your skin feel?</label>
+
+        <select id="skin-mood" required>
+            <option value="">Choose one</option>
+            <option value="Calm">Calm</option>
+            <option value="Dry">Dry</option>
+            <option value="Oily">Oily</option>
+            <option value="Sensitive">Sensitive</option>
+            <option value="Breaking out">Breaking out</option>
+        </select>
+
+        <label for="skin-notes">Notes</label>
+
+        <textarea
+            id="skin-notes"
+            placeholder="Write about your skin today..."
+            rows="4"
+        ></textarea>
+
+        <button type="submit">Save Diary Entry</button>
+    </form>
+
+    <div id="diary-list"></div>
+</section>
